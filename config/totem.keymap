@@ -223,7 +223,7 @@
         capture_region: capture_region {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
+            bindings = <
                 &macro_press   &kp LGUI &kp LSHFT  // Press and hold Command (LGUI) and Shift (LSHFT)
                 &macro_tap     &kp N5              // Tap the '5' key
                 &macro_release &kp LGUI &kp LSHFT  // Release Command and Shift
