@@ -98,7 +98,12 @@
             layers = <1 2 3>;
             bindings = <&bootloader>;
         };
-
+        combo_caps_word {
+            timeout-ms = <50>;
+            key-positions = <26 27>;
+            layers = <0 1 2 3>;
+            bindings = <&caps_word>;
+        };
         combo_undo {
             timeout-ms = <50>;
             key-positions = <34 35>;
@@ -122,39 +127,44 @@
 
         combo_ctrl1 {
             timeout-ms = <50>;
-            key-positions = <11 13>;
+            key-positions = <11 12>;
             layers = <0>;
             bindings = <&kp LCTRL>;
         };
 
         combo_ctrl2 {
             timeout-ms = <50>;
-            key-positions = <16 18>;
+            key-positions = <18 17>;
             layers = <0>;
             bindings = <&kp RCTRL>;
         };
 
         combo_alt1 {
             timeout-ms = <50>;
-            key-positions = <13 10>;
+            key-positions = <11 10>;
             layers = <0>;
             bindings = <&kp LALT>;
         };
 
         combo_alt2 {
             timeout-ms = <50>;
-            key-positions = <16 19>;
+            key-positions = <18 19>;
             layers = <0>;
             bindings = <&kp RALT>;
         };
 
-        combo_super {
+        combo_super1 {
             timeout-ms = <50>;
-            key-positions = <32 37>;
+            key-positions = <13 12>;
             layers = <0 2 3 1>;
             bindings = <&kp LGUI>;
         };
-
+        combo_super2 {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            layers = <0 2 3 1>;
+            bindings = <&kp LGUI>;
+        };
         combo_backspace1 {
             key-positions = <5 6>;
             timeout-ms = <50>;
@@ -171,7 +181,7 @@
 
         region_screen {
             bindings = <&capture_region>;
-            key-positions = <20 25>;
+            key-positions = <5 6>;
             layers = <0 1 2 3>;
             timeout-ms = <50>;
         };
@@ -197,16 +207,16 @@
             layers = <0 1 2 3>;
         };
 
-        /* 			combo_copy {
+        combo_copy {
                 timeout-ms = <50>;
-                key-positions = <5 31 24>;
-                bindings = <&bootloader>;
+                key-positions = <22 23>;
+                bindings = <&kp LG(C)>;
             };
-			combo_paste {
+		combo_paste {
                 timeout-ms = <50>;
-                key-positions = <5 31 12>;
-                bindings = <&bootloader>;
-            }; */
+                key-positions = <23 24>;
+                bindings = <&kp LG(V)>;
+            }; 
     };
 
     macros {
@@ -214,12 +224,19 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                &macro_press   &kp LGUI &kp LSHFT  // Press and hold Command (LGUI) and Shift (LSHFT)
+                &macro_tap     &kp N5              // Tap the '5' key
+                &macro_release &kp LGUI &kp LSHFT  // Release Command and Shift
+            >;
+            wait-ms = <10>;
+            tap-ms = <10>;
+//Windows
+/*                <&macro_press>,
                 <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp PRINTSCREEN>,
                 <&macro_release>,
-                <&kp LCTRL>;
+                <&kp LCTRL>;*/
 
             label = "CAPTURE_REGION";
         };
@@ -279,10 +296,10 @@
                          &kp LC(C)  &lt 2 LC(V)  &lt 1 SPACE    &lt 1 RET  &lt 2 BSPC &kp LC(GRAVE)
             >;*/
 			bindings = <
-              &kp Q       &kp W       &kp E          &kp R         &kp T            &kp Y           &kp U       &kp I        &kp O          &kp P
-              &kp A 	  &kp S 	  &kp D  	     &kp F 		   &kp G            &kp H           &kp J  	    &kp K 	     &kp L  	    &kp SEMICOLON
-&lt 3 TAB	  &kp Z       &kp X       &kp C          &kp V         &kp B            &kp N           &kp M        &kp COMMA      &kp DOT     &kp SLASH     &kp RSHFT
-                                        &lt 1 SPACE	 &kp BSPC      &lt 3 DEL        &lt 2 RET       &mt LSHFT SPACE     &bt BT_NXT
+              &kp Q       &kp W       &kp E          &kp R         &kp T                &kp Y           &kp U       &kp I        &kp O          &kp P
+              &kp A 	  &kp S 	  &kp D  	     &kp F 		   &kp G                &kp H           &kp J  	    &kp K 	     &kp L  	    &kp SEMICOLON
+&lt 3 TAB	  &kp Z       &kp X       &kp C          &kp V         &kp B                &kp N           &kp M        &kp COMMA      &kp DOT     &kp SLASH     &kp RSHFT
+                                        &lt 1 SPACE	 &lt 1 BSPC      &lt 3 DEL      &lt 2 RET       &mt LSHFT SPACE     &bt BT_NXT
             >; 
         };
 
