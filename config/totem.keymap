@@ -284,7 +284,7 @@
             //             ├─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┤
             //             │    A    │    S    │    D    │    F    │    G    │                     │    H    │    J    │    K    │    L    │    ;    │
             //   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-            //   │   TAB   │    Z    │    X    │    C    │    V    │    B    │                     │    N    │    M    │    ,    │    .    │    /    │        │
+            //   │   TAB   │    Z    │    X    │    C    │    V    │    B    │                     │    N    │    M    │    ,    │    .    │    /    │  SHIFT  │
             //   └─────────┴─────────┴─────────┴─────────┼─────────┼─────────┼──────────┬┬─────────┼─────────┼─────────┼─────────┴─────────┴─────────┴─────────┘
             //                                           │   COPY  │  PASTE  │  SPACE   ││  ENTER  │  BSPCE  │  DITTO  │  
             //                                           └─────────┴─────────┴──────────┘└─────────┴─────────┴─────────┘
@@ -312,20 +312,20 @@
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┌─────────┬─────────┬─────────┬─────────┬─────────┐                     ┌─────────┬─────────┬─────────┬─────────┬─────────┐
-            //             │    -    │    7    │    8    │    9    │    /    │                     │    /    │    7    │    8    │    9    │    -    │
+            //             │    1    │    2    │    3    │    4    │    5    │                     │    6    │    7    │    8    │    9    │    0    │
             //             ├─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┤
-            //             │    +    │    4    │    5    │    6    │    *    │                     │    *    │    4    │    5    │    6    │    +    │
+            //             │    ~    │    -    │    =    │    \    │    '    │                     │    <-   │    ↓    │    ↑    │    ->   │   PG_UP │
             //   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-            //   │  PRINT  │    .    │    1    │    2    │    3    │ ------- │                     │ ------- │    1    │    2    │    3    │    .    │         │
+            //   │    TAB  │    [    │    ]    │    {    │    }    │ ------- │                     │ HOME    │  PG_DN  │  PG_UP  │  END    │   PG_DN │   SHIFT │
             //   └─────────┴─────────┴─────────┴─────────┼─────────┼─────────┼──────────┬┬─────────┼─────────┼─────────┼─────────┴─────────┴─────────┴─────────┘
             //                                           │    0    │  ENTER  │  SPACE   ││  SPACE  │  ENTER  │    0    │ 
             //                                           └─────────┴─────────┴──────────┘└─────────┴─────────┴─────────┘
 
             bindings = <
-           &kp KP_N1    &kp KP_N2     &kp KP_N3 &kp KP_N4  &kp KP_N5           &kp KP_N6    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0
-           &kp GRAVE    &kp KP_MINUS  &kp EQUAL &kp BSLH  &kp SQT              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &kp PG_UP  
-&kp LSHFT  &kp LBKT     &kp RBKT      &kp LBRC  &kp RBRC  &kp RET                &kp HOME    &kp PG_DN  &kp PG_UP  &kp END  &kp PG_DN    &trans
-                                    &trans  &trans     &kp SPACE                &kp SPACE    &trans     &kp KP_N0
+            &kp KP_N1    &kp KP_N2     &kp KP_N3 &kp KP_N4  &kp KP_N5           &kp KP_N6    &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_N0
+            &kp GRAVE    &kp KP_MINUS  &kp EQUAL &kp BSLH  &kp SQT              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &kp PG_UP  
+&kp TAB     &kp LBKT     &kp RBKT      &kp LBRC  &kp RBRC  &kp RET                &kp HOME    &kp PG_DN  &kp PG_UP  &kp END  &kp PG_DN    &trans
+                                    &trans  &trans     &trans                &trans    &trans     &trans
             >;
         };
 
@@ -340,18 +340,19 @@
             //             ┌─────────┬─────────┬─────────┬─────────┬─────────┐                    ┌─────────┬─────────┬─────────┬─────────┬─────────┐
             //             │    !    │    @    │    #    │    $    │    %    │                    │    ^    │    &    │    *    │    -    │    +    │   
             //             ├─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┤
-            //             │    (    │    ←    │    ↑    │    →    │    )    │                    │  PGUP   │    <    │  PLAY   │    >    │   HOME  │
+            //             │    ~    │    -    │    =    │    \    │    '    │                    │    <-   │    ↓    │    ↑    │    ->   │   PG_UP │
             //   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                    ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-            //   │         │    [    │    `    │    ↓    │    _    │    ]    │                    │  PGDWN  │   VOL+  │  MUTE   │   VOL-  │   END   │  TO_0   │
+            //   │    TAB  │    [    │    ]    │    {    │    }    │ ------- │                    │ HOME    │  PG_DN  │  PG_UP  │  END    │   PG_DN │   SHIFT │
             //   └─────────┴─────────┴─────────┴─────────┼─────────┼─────────┼─────────┬┬─────────┼─────────┼─────────┼─────────┴─────────┴─────────┴─────────┘
             //                                           │   ALT   │  CTRL   │  SHIFT  ││         │         │         │  
             //                                           └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘
 
             bindings = <
-                 &kp EXCL  &kp AT     &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS      &kp ASTRK   &kp MINUS     &kp EQUAL
-                 &kp LPAR  &kp LEFT   &kp UP    &kp RIGHT  &kp RPAR     &kp PG_UP  &kp C_PREV    &kp C_PP    &kp C_NEXT    &kp HOME
-&kp PRINTSCREEN  &kp LBKT  &kp GRAVE  &kp DOWN  &kp UNDER  &kp RBKT     &kp PG_DN  &kp C_VOL_UP  &kp C_MUTE  &kp C_VOL_DN  &kp END    &to 0
-                                      &kp LALT  &kp LCTRL  &kp LSHFT    &trans     &trans        &trans
+                 &kp EXCL  &kp AT     &kp HASH  &kp DLLR   &kp PRCNT            &kp CARET  &kp AMPS      &kp ASTRK   &kp MINUS     &kp EQUAL
+                 &kp LPAR  &kp LEFT   &kp UP    &kp RIGHT  &kp RPAR              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &kp PG_UP  
+&kp PRINTSCREEN  &kp LBKT  &kp GRAVE  &kp DOWN  &kp UNDER  &kp RBKT             &kp HOME    &kp PG_DN  &kp PG_UP  &kp END  &kp PG_DN    &trans
+                                    &trans  &trans     &trans                
+                                      &kp LALT  &kp LCTRL  &kp LSHFT            &trans     &trans        &trans
             >;
         };
 
@@ -374,10 +375,10 @@
             //                                           └─────────┴─────────┴──────────┘└─────────┴─────────┴─────────┘
 
             bindings = <
-        &sys_reset        &bt BT_CLR  &out OUT_TOG            &kp LG(LA(UP_ARROW))     &bt BT_SEL 0    &kp INSERT       &kp F7  &kp F8  &kp F9  &kp F12
-        &bootloader       &bt BT_NXT  &kp LG(LA(LEFT_ARROW))  &kp LG(LA(RIGHT_ARROW))  &bt BT_SEL 1    &kp SLCK         &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &region_capture2  &bt BT_PRV  &studio_unlock          &kp LG(LA(DOWN_ARROW))   &bt BT_SEL 2    &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                      &trans                  &trans                   &kp SPACE       &trans           &trans  &trans
+        &sys_reset        &bt BT_CLR  &out OUT_TOG            &kp LG(LA(UP_ARROW))     &bt BT_SEL 0         &kp INSERT       &kp F7  &kp F8  &kp F9  &kp F12
+        &bootloader       &bt BT_NXT  &kp LG(LA(LEFT_ARROW))  &kp LG(LA(RIGHT_ARROW))  &bt BT_SEL 1         &kp SLCK         &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &region_capture2  &bt BT_PRV  &studio_unlock          &kp LG(LA(DOWN_ARROW))   &bt BT_SEL 2         &kp PAUSE_BREAK  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                                      &trans                  &trans                   &trans               &trans           &trans  &trans
             >;
         };
 
