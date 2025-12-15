@@ -36,6 +36,8 @@
 
 / {
     behaviors {
+        
+        
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -101,7 +103,7 @@
             timeout-ms = <50>;
             key-positions = <20 31>;
             layers = <1 2 3>;
-            bindings = <&bootloader>;
+            bindings = <&CAPS>;
         };
         combo_caps_word {
             timeout-ms = <50>;
@@ -217,7 +219,12 @@
                 key-positions = <22 23>;
                 bindings = <&kp LG(C)>;
             };
-		combo_paste {
+		combo_cut {
+                timeout-ms = <50>;
+                key-positions = <21 22>;
+                bindings = <&kp LG(X)>;
+            };
+        combo_paste {
                 timeout-ms = <50>;
                 key-positions = <23 24>;
                 bindings = <&kp LG(V)>;
@@ -239,7 +246,7 @@
 		    compatible = "zmk,behavior-hold-tap";
 		    label = "AUTOSHIFT_HOLD_TAP";
 		    #binding-cells = <2>;
-		    tapping-term-ms = <135>;
+		    tapping-term-ms = <175>;
 		    flavor = "tap-preferred";
 		    bindings = <&shifted>, <&kp>;
   		};
