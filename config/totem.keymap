@@ -348,7 +348,7 @@
             //                                           └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘
 
             bindings = <
-            &kp EXCL    &kp AT     &kp HASH  &kp DLLR   &kp PRCNT           &kp CARET   &kp AMPS    &kp ASTRK   &kp MINUS   &kp EQUAL
+            &kp EXCL    &kp AT     &kp HASH  &kp DLLR   &kp PRCNT           &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR   &kp RPAR
             &kp GRAVE   &kp MINUS  &kp EQUAL &kp BSLH   &kp SQT             &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp PG_UP   
 &kp TAB     &kp LBKT    &kp RBKT   &kp LBRC  &kp RBRC   &kp RET             &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp PG_DN   &trans
 //&kp PRINTSCREEN  &kp LBKT  &kp GRAVE  &kp DOWN  &kp UNDER  &kp RBKT             &kp HOME    &kp PG_DN  &kp PG_UP  &kp END  &kp PG_DN    &trans
