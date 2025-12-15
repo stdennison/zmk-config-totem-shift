@@ -284,9 +284,9 @@
             //             ├─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┤
             //             │    A    │    S    │    D    │    F    │    G    │                     │    H    │    J    │    K    │    L    │    ;    │
             //   ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                     ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐
-            //   │   TAB   │    Z    │    X    │    C    │    V    │    B    │                     │    N    │    M    │    ,    │    .    │    /    │  SHIFT  │
+            //   │ ESC/LT 3│    Z    │    X    │    C    │    V    │    B    │                     │    N    │    M    │    ,    │    .    │    /    │  SHIFT  │
             //   └─────────┴─────────┴─────────┴─────────┼─────────┼─────────┼──────────┬┬─────────┼─────────┼─────────┼─────────┴─────────┴─────────┴─────────┘
-            //                                           │   COPY  │  PASTE  │  SPACE   ││  ENTER  │  BSPCE  │  DITTO  │  
+            //                                           │SPC/LT 1 │BSPC/LT 1│ DEL/LT 2 ││  RT/LT 2│SPC/SHFT │ESC/LT 3 │  
             //                                           └─────────┴─────────┴──────────┘└─────────┴─────────┴─────────┘
 
 /*            bindings = <
@@ -322,10 +322,10 @@
             //                                           └─────────┴─────────┴──────────┘└─────────┴─────────┴─────────┘
 
             bindings = <
-            &kp N1    &kp N2     &kp N3 &kp N4  &kp N5           &kp N6    &kp N7  &kp N8  &kp N9  &kp N0
-            &kp GRAVE    &kp MINUS  &kp EQUAL &kp BSLH  &kp SQT              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &kp PG_UP  
-&kp TAB     &kp LBKT     &kp RBKT      &kp LBRC  &kp RBRC  &kp RET                &kp HOME    &kp PG_DN  &kp PG_UP  &kp END  &kp PG_DN    &trans
-                                    &trans  &trans     &trans                &trans    &trans     &trans
+            &kp N1    &kp N2     &kp N3     &kp N4      &kp N5                  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
+            &kp GRAVE &kp MINUS  &kp EQUAL  &kp BSLH    &kp SQT                 &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp PG_UP  
+&kp TAB     &kp LBKT  &kp RBKT   &kp LBRC   &kp RBRC    &kp RET                 &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp PG_DN    &trans
+                                    &trans  &trans      &trans                  &trans      &trans      &trans
             >;
         };
 
@@ -348,14 +348,12 @@
             //                                           └─────────┴─────────┴─────────┘└─────────┴─────────┴─────────┘
 
             bindings = <
-            &kp EXCL  &kp AT     &kp HASH  &kp DLLR   &kp PRCNT            &kp CARET  &kp AMPS      &kp ASTRK   &kp MINUS     &kp EQUAL
-            &kp GRAVE    &kp MINUS  &kp EQUAL &kp BSLH  &kp SQT              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &kp PG_UP   
-    //      &kp LPAR  &kp LEFT   &kp UP    &kp RIGHT  &kp RPAR              &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT  &kp PG_UP  
-&kp TAB     &kp LBKT     &kp RBKT      &kp LBRC  &kp RBRC  &kp RET                &kp HOME    &kp PG_DN  &kp PG_UP  &kp END  &kp PG_DN    &trans
-
+            &kp EXCL    &kp AT     &kp HASH  &kp DLLR   &kp PRCNT           &kp CARET   &kp AMPS    &kp ASTRK   &kp MINUS   &kp EQUAL
+            &kp GRAVE   &kp MINUS  &kp EQUAL &kp BSLH   &kp SQT             &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp PG_UP   
+&kp TAB     &kp LBKT    &kp RBKT   &kp LBRC  &kp RBRC   &kp RET             &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &kp PG_DN   &trans
 //&kp PRINTSCREEN  &kp LBKT  &kp GRAVE  &kp DOWN  &kp UNDER  &kp RBKT             &kp HOME    &kp PG_DN  &kp PG_UP  &kp END  &kp PG_DN    &trans
-                                    &trans  &trans     &trans                
-                                      &kp LALT  &kp LCTRL  &kp LSHFT            &trans     &trans        &trans
+                                    &trans  &trans     &trans                   &trans  &trans     &trans                
+//                                      &kp LALT  &kp LCTRL  &kp LSHFT            &trans     &trans        &trans
             >;
         };
 
