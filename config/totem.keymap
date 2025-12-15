@@ -99,11 +99,11 @@
             bindings = <&kp ESC>;
         };
 
-        combo_boot {
+        combo_lock {
             timeout-ms = <50>;
             key-positions = <20 31>;
-            layers = <1 2 3>;
-            bindings = <&CAPS>;
+            layers = <0 1 2 3>;
+            bindings = <&kp CAPSLOCK>;
         };
         combo_caps_word {
             timeout-ms = <50>;
