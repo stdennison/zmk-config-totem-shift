@@ -341,10 +341,10 @@
                          &kp LC(C)  &lt 2 LC(V)  &lt 1 SPACE    &lt 1 RET  &lt 2 BSPC &kp LC(GRAVE)
             >;*/
 			bindings = <
-              &as Q       &as W       &as E          &as R         &as T                &as Y           &as U       &as I        &as O          &as P
-              &as A 	  &as S 	  &as D  	     &as F 		   &as G                &as H           &as J  	    &as K 	     &as L  	    &as SEMICOLON
-&lt 3 ESC	  &as Z       &as X       &as C          &as V         &as B                &as N           &as M        &as COMMA      &as DOT     &as SLASH     &kp RSHFT
-                                        &lt 1 SPACE	 &lt 1 BSPC      &lt 2 DEL      &lt 2 RET       &mt LSHFT SPACE     &lt 3 ESC
+              	&as Q   &as W   &as E	&as R 	&as T                &as Y  	&as U	&as I        &as O 	&as P
+              	&as A 	&as S 	&as D  	&as F	&as G                &as H      &as J  	&as K 	     &as L  	&as SEMICOLON
+&as ESC	&as Z   &as X	&as C   &as V   &as B                &as N      &as M   &as COMMA    &as DOT    &as SLASH     &kp RSHFT
+                        &lt 3 SPACE &lt 1 BSPC 	&lt 2 DEL            &lt 2 RET  &mt LSHFT SPACE     &lt 3 ESC
             >; 
         };
 
